@@ -10,4 +10,7 @@ storiesOf('ArticleForm', module).add('default', ()=> (
 ))
 .add('error message', () => (
   <ArticleForm errorMessage = "empty all fields"/>
-));
+))
+.add('creating', () => (
+  <ArticleForm creating />
+))

@@ -5,6 +5,7 @@ export default class ArticleForm extends Component{
   static defaultProps = {
     errorMessage: '',
     onSubmit: () => {},
+    creating: false,
   }
 
 
@@ -24,9 +25,9 @@ export default class ArticleForm extends Component{
   }
   render() {
     const {title, content} = this.state;
-    const { errorMessage} = this.props;
+    const { errorMessage, creating} = this.props;
     return (
-      <Form as="div">
+      <Form as="div" loading={creating}>
       {/* div를 안쓰면 Form 컴포넌트가 실제 html 폼 컴포넌트로 rendering된다 그걸 쓰고 싶지 않아서
       html form tag 대신에 div tag가 대신 사용되도록 넣어줬따.
       이 방법이 브라우저 내장 기능을 안 쓰는 깔끔한 방법*/}
