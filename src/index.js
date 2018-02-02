@@ -8,12 +8,12 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 var config = {
-  apiKey: "AIzaSyD-cqxiOFQeDYsvcrsOwq0TyMJgAiX53dQ",
-  authDomain: "react-redux-semantic.firebaseapp.com",
-  databaseURL: "https://react-redux-semantic.firebaseio.com",
-  projectId: "react-redux-semantic",
-  storageBucket: "",
-  messagingSenderId: "178920935336"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 };
 firebase.initializeApp(config);
 

@@ -31,7 +31,7 @@ export default connect (
     onSubmit: ({title, content}) => {
       dispatch(createArticle({title, content}));
     },
-  })
+  }),
 )(ArticleFormContainer);
 
 //success가 true면 list로 redirect 해줘야함

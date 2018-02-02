@@ -17,7 +17,7 @@ class ArticleListContainer extends Component {
     const {onMount, ...rest} = this.props;
     // ArticleListContainer에서 onMount를 골라내고 나머지만 props로 내려주겠다.
     return (
-      <ArticleListWithLoading {...this.props} />
+      <ArticleListWithLoading {...rest} />
     )
   }
 }
