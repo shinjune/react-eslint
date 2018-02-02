@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
-import TopMenu from '../components/TopMenu';
+import React, {Component} from 'react';
+import TopMenu from '../components/TopMenu'
+import {Link} from 'react-router-dom';
 
 const logoProps = {
   as: Link,
-  to: '/link',
+  to: '/link'
 };
-
 const accountProps = {
   as: Link,
-  to: '/account',
+  to: '/account'
 };
 
 export default class TopMenuContainer extends Component {
   render() {
     return (
       <TopMenu logoProps={logoProps} accountProps={accountProps} />
-    );
+    )
   }
 }

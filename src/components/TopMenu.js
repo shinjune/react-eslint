@@ -1,32 +1,27 @@
-import React, {Component} from 'react';
-import {Menu} from 'semantic-ui-react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
 
+import { Menu } from 'semantic-ui-react';
 
 export default class TopMenu extends Component {
   static defaultProps = {
     logoProps: {},
-    accountProps: {}
+    accountProps: {},
   }
   render() {
-    const {logoProps, accountProps} = this.props;
+    const { logoProps, accountProps } = this.props;
     return (
       <Menu>
-        <Menu.Item {...logoProps} name='browse'>
-        {/* <Menu.Item as="a" href="https:/google.com" name='browse'  > */}
-        {/* 이렇게 쓰는 것보다는 윗윗줄처럼 쓰고 위에 cosnt 설정이 좋다 */}
-          Articles
+        <Menu.Item {...logoProps} name="browse">
+          게시판
         </Menu.Item>
 
-        <Menu.Menu position='right'>
-          <Menu.Item {...accountProps} name='signup'  >
-            Sign Up
-          </Menu.Item>
-          <Menu.Item name='help'  >
-            Help
+        <Menu.Menu position="right">
+          <Menu.Item {...accountProps} name="signup">
+            계정
           </Menu.Item>
         </Menu.Menu>
       </Menu>
-    )
+    );
   }
 }
+
