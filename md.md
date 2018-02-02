@@ -89,3 +89,6 @@ same as above
 
 ### 글열람
 same as above
+
+
+### prenestational companonent의 componentDidMount에서 데이터로딩 하면 안된다.

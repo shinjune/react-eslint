@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import ArticleForm from '../components/ArticleForm';
+import {createArticle} from '../ducks/article';
 
 class ArticleFormContainer extends Component{
   render() {
@@ -19,7 +20,6 @@ class ArticleFormContainer extends Component{
 }
 
 export default connect (
-
   //mapStateToProps
   state => ({
     creating: state.article.creating,
@@ -27,6 +27,11 @@ export default connect (
     errorMessage: state.article.errorMessage,
   }),
   // mapDispatchToProps
+  dispatch => ({
+    onSubmit: ({title, content}) => {
+      dispatch(createArticle({title, content}));
+    },
+  })
 )(ArticleFormContainer);
 
 //success가 true면 list로 redirect 해줘야함

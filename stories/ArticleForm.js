@@ -13,4 +13,4 @@ storiesOf('ArticleForm', module).add('default', ()=> (
 ))
 .add('creating', () => (
   <ArticleForm creating />
-))
+));
